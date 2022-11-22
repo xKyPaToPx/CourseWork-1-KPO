@@ -69,6 +69,7 @@ partial class Form1
             this.label1.Size = new System.Drawing.Size(375, 72);
             this.label1.TabIndex = 2;
             this.label1.Text = "Login/Register";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ExitButton
             // 

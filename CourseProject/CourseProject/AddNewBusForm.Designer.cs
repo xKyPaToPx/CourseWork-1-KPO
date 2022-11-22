@@ -46,12 +46,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.backButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numLeftUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(616, 364);
+            this.addButton.Location = new System.Drawing.Point(41, 404);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(112, 34);
             this.addButton.TabIndex = 0;
@@ -63,7 +64,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(134, 9);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(485, 70);
             this.label1.TabIndex = 1;
@@ -73,14 +74,16 @@
             // 
             this.numberText.Location = new System.Drawing.Point(41, 146);
             this.numberText.Name = "numberText";
-            this.numberText.Size = new System.Drawing.Size(150, 31);
+            this.numberText.PlaceholderText = "XXXX";
+            this.numberText.Size = new System.Drawing.Size(182, 31);
             this.numberText.TabIndex = 2;
             // 
             // depDateText
             // 
             this.depDateText.Location = new System.Drawing.Point(41, 364);
             this.depDateText.Name = "depDateText";
-            this.depDateText.Size = new System.Drawing.Size(150, 31);
+            this.depDateText.PlaceholderText = "MM/DD/YY";
+            this.depDateText.Size = new System.Drawing.Size(182, 31);
             this.depDateText.TabIndex = 4;
             // 
             // typeBox
@@ -112,30 +115,33 @@
             // 
             // arrTimeText
             // 
-            this.arrTimeText.Location = new System.Drawing.Point(372, 220);
+            this.arrTimeText.Location = new System.Drawing.Point(254, 220);
             this.arrTimeText.Name = "arrTimeText";
-            this.arrTimeText.Size = new System.Drawing.Size(150, 31);
+            this.arrTimeText.PlaceholderText = "HH:MM";
+            this.arrTimeText.Size = new System.Drawing.Size(180, 31);
             this.arrTimeText.TabIndex = 7;
             // 
             // costText
             // 
-            this.costText.Location = new System.Drawing.Point(372, 293);
+            this.costText.Location = new System.Drawing.Point(254, 293);
             this.costText.Name = "costText";
-            this.costText.Size = new System.Drawing.Size(150, 31);
+            this.costText.PlaceholderText = "X.X";
+            this.costText.Size = new System.Drawing.Size(180, 31);
             this.costText.TabIndex = 8;
             // 
             // numLeftUpDown
             // 
-            this.numLeftUpDown.Location = new System.Drawing.Point(372, 364);
+            this.numLeftUpDown.Location = new System.Drawing.Point(254, 364);
             this.numLeftUpDown.Name = "numLeftUpDown";
             this.numLeftUpDown.Size = new System.Drawing.Size(180, 31);
             this.numLeftUpDown.TabIndex = 9;
             // 
             // depTimeTExt
             // 
-            this.depTimeTExt.Location = new System.Drawing.Point(369, 146);
+            this.depTimeTExt.Location = new System.Drawing.Point(251, 146);
             this.depTimeTExt.Name = "depTimeTExt";
-            this.depTimeTExt.Size = new System.Drawing.Size(150, 31);
+            this.depTimeTExt.PlaceholderText = "HH:MM";
+            this.depTimeTExt.Size = new System.Drawing.Size(183, 31);
             this.depTimeTExt.TabIndex = 10;
             // 
             // label2
@@ -170,14 +176,14 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(41, 336);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 25);
+            this.label5.Size = new System.Drawing.Size(131, 25);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Departure";
+            this.label5.Text = "Departure date";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(372, 118);
+            this.label6.Location = new System.Drawing.Point(254, 118);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(134, 25);
             this.label6.TabIndex = 15;
@@ -186,7 +192,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(372, 192);
+            this.label7.Location = new System.Drawing.Point(254, 192);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 25);
             this.label7.TabIndex = 16;
@@ -195,7 +201,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(372, 265);
+            this.label8.Location = new System.Drawing.Point(254, 265);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 25);
             this.label8.TabIndex = 17;
@@ -204,17 +210,27 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(372, 336);
+            this.label9.Location = new System.Drawing.Point(254, 336);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(111, 25);
             this.label9.TabIndex = 18;
             this.label9.Text = "Number Left";
             // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(322, 404);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(112, 34);
+            this.backButton.TabIndex = 19;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            // 
             // AddNewBusForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(492, 450);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -261,5 +277,6 @@
         private Label label7;
         private Label label8;
         private Label label9;
+        private Button backButton;
     }
 }

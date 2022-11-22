@@ -67,7 +67,7 @@ public partial class LogForm : Form
         }
         else
         {
-            MessageBox.Show("Гsername and password must be more than 3 characters", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Username and password must be more than 3 characters", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         
     }

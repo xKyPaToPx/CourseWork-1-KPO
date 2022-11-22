@@ -57,6 +57,7 @@
             this.numSoldNum = new System.Windows.Forms.NumericUpDown();
             this.typeComboBox = new System.Windows.Forms.ComboBox();
             this.destComboBox2 = new System.Windows.Forms.ComboBox();
+            this.sqliteCommand1 = new Microsoft.Data.Sqlite.SqliteCommand();
             ((System.ComponentModel.ISupportInitialize)(this.numLeftNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoldNum)).BeginInit();
             this.SuspendLayout();
@@ -65,17 +66,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(110, 9);
+            this.label1.Location = new System.Drawing.Point(157, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 47);
+            this.label1.Size = new System.Drawing.Size(309, 71);
             this.label1.TabIndex = 0;
             this.label1.Text = "Search Data";
             // 
             // byNumberButton
             // 
-            this.byNumberButton.Location = new System.Drawing.Point(11, 144);
+            this.byNumberButton.Location = new System.Drawing.Point(16, 240);
+            this.byNumberButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.byNumberButton.Name = "byNumberButton";
-            this.byNumberButton.Size = new System.Drawing.Size(118, 47);
+            this.byNumberButton.Size = new System.Drawing.Size(169, 78);
             this.byNumberButton.TabIndex = 1;
             this.byNumberButton.Text = "Search by number";
             this.byNumberButton.UseVisualStyleBackColor = true;
@@ -84,33 +87,39 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 97);
+            this.label2.Location = new System.Drawing.Point(16, 162);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 15);
+            this.label2.Size = new System.Drawing.Size(77, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Number";
             // 
             // numberText
             // 
-            this.numberText.Location = new System.Drawing.Point(11, 115);
+            this.numberText.Location = new System.Drawing.Point(16, 192);
+            this.numberText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numberText.Name = "numberText";
-            this.numberText.Size = new System.Drawing.Size(118, 23);
+            this.numberText.PlaceholderText = "XXXX";
+            this.numberText.Size = new System.Drawing.Size(167, 31);
             this.numberText.TabIndex = 3;
+            this.numberText.Tag = "";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 200);
+            this.label3.Location = new System.Drawing.Point(16, 333);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 15);
+            this.label3.Size = new System.Drawing.Size(49, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "Type";
             // 
             // byTypeButton
             // 
-            this.byTypeButton.Location = new System.Drawing.Point(11, 247);
+            this.byTypeButton.Location = new System.Drawing.Point(16, 412);
+            this.byTypeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.byTypeButton.Name = "byTypeButton";
-            this.byTypeButton.Size = new System.Drawing.Size(118, 47);
+            this.byTypeButton.Size = new System.Drawing.Size(169, 78);
             this.byTypeButton.TabIndex = 4;
             this.byTypeButton.Text = "Search by type";
             this.byTypeButton.UseVisualStyleBackColor = true;
@@ -119,17 +128,19 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 307);
+            this.label4.Location = new System.Drawing.Point(16, 512);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 15);
+            this.label4.Size = new System.Drawing.Size(102, 25);
             this.label4.TabIndex = 8;
             this.label4.Text = "Destination";
             // 
             // byDestButton
             // 
-            this.byDestButton.Location = new System.Drawing.Point(11, 354);
+            this.byDestButton.Location = new System.Drawing.Point(16, 590);
+            this.byDestButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.byDestButton.Name = "byDestButton";
-            this.byDestButton.Size = new System.Drawing.Size(119, 47);
+            this.byDestButton.Size = new System.Drawing.Size(170, 78);
             this.byDestButton.TabIndex = 7;
             this.byDestButton.Text = "Search by destination";
             this.byDestButton.UseVisualStyleBackColor = true;
@@ -137,25 +148,29 @@
             // 
             // depDataText
             // 
-            this.depDataText.Location = new System.Drawing.Point(156, 115);
+            this.depDataText.Location = new System.Drawing.Point(223, 192);
+            this.depDataText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.depDataText.Name = "depDataText";
-            this.depDataText.Size = new System.Drawing.Size(118, 23);
+            this.depDataText.PlaceholderText = "MM/DD/YY";
+            this.depDataText.Size = new System.Drawing.Size(167, 31);
             this.depDataText.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(156, 97);
+            this.label6.Location = new System.Drawing.Point(223, 162);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 15);
+            this.label6.Size = new System.Drawing.Size(133, 25);
             this.label6.TabIndex = 11;
             this.label6.Text = "Departure Date";
             // 
             // byDepDataButton
             // 
-            this.byDepDataButton.Location = new System.Drawing.Point(156, 144);
+            this.byDepDataButton.Location = new System.Drawing.Point(223, 240);
+            this.byDepDataButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.byDepDataButton.Name = "byDepDataButton";
-            this.byDepDataButton.Size = new System.Drawing.Size(118, 47);
+            this.byDepDataButton.Size = new System.Drawing.Size(169, 78);
             this.byDepDataButton.TabIndex = 10;
             this.byDepDataButton.Text = "Search by departure date";
             this.byDepDataButton.UseVisualStyleBackColor = true;
@@ -163,25 +178,29 @@
             // 
             // depTimeText
             // 
-            this.depTimeText.Location = new System.Drawing.Point(156, 218);
+            this.depTimeText.Location = new System.Drawing.Point(223, 363);
+            this.depTimeText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.depTimeText.Name = "depTimeText";
-            this.depTimeText.Size = new System.Drawing.Size(118, 23);
+            this.depTimeText.PlaceholderText = "HH:MM";
+            this.depTimeText.Size = new System.Drawing.Size(167, 31);
             this.depTimeText.TabIndex = 15;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(156, 200);
+            this.label5.Location = new System.Drawing.Point(223, 333);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 15);
+            this.label5.Size = new System.Drawing.Size(134, 25);
             this.label5.TabIndex = 14;
             this.label5.Text = "Departure Time";
             // 
             // byDepTimeButton
             // 
-            this.byDepTimeButton.Location = new System.Drawing.Point(156, 247);
+            this.byDepTimeButton.Location = new System.Drawing.Point(223, 412);
+            this.byDepTimeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.byDepTimeButton.Name = "byDepTimeButton";
-            this.byDepTimeButton.Size = new System.Drawing.Size(118, 47);
+            this.byDepTimeButton.Size = new System.Drawing.Size(169, 78);
             this.byDepTimeButton.TabIndex = 13;
             this.byDepTimeButton.Text = "Search by departure time";
             this.byDepTimeButton.UseVisualStyleBackColor = true;
@@ -189,25 +208,29 @@
             // 
             // arrTimeText
             // 
-            this.arrTimeText.Location = new System.Drawing.Point(156, 325);
+            this.arrTimeText.Location = new System.Drawing.Point(223, 542);
+            this.arrTimeText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.arrTimeText.Name = "arrTimeText";
-            this.arrTimeText.Size = new System.Drawing.Size(118, 23);
+            this.arrTimeText.PlaceholderText = "HH:MM";
+            this.arrTimeText.Size = new System.Drawing.Size(167, 31);
             this.arrTimeText.TabIndex = 18;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(156, 307);
+            this.label7.Location = new System.Drawing.Point(223, 512);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 15);
+            this.label7.Size = new System.Drawing.Size(105, 25);
             this.label7.TabIndex = 17;
             this.label7.Text = "Arrival Time";
             // 
             // byArrTimeButton
             // 
-            this.byArrTimeButton.Location = new System.Drawing.Point(156, 354);
+            this.byArrTimeButton.Location = new System.Drawing.Point(223, 590);
+            this.byArrTimeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.byArrTimeButton.Name = "byArrTimeButton";
-            this.byArrTimeButton.Size = new System.Drawing.Size(118, 47);
+            this.byArrTimeButton.Size = new System.Drawing.Size(169, 78);
             this.byArrTimeButton.TabIndex = 16;
             this.byArrTimeButton.Text = "Search by arrival time";
             this.byArrTimeButton.UseVisualStyleBackColor = true;
@@ -215,25 +238,29 @@
             // 
             // costText
             // 
-            this.costText.Location = new System.Drawing.Point(302, 115);
+            this.costText.Location = new System.Drawing.Point(431, 192);
+            this.costText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.costText.Name = "costText";
-            this.costText.Size = new System.Drawing.Size(118, 23);
+            this.costText.PlaceholderText = "X.X";
+            this.costText.Size = new System.Drawing.Size(167, 31);
             this.costText.TabIndex = 21;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(302, 97);
+            this.label8.Location = new System.Drawing.Point(431, 162);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 15);
+            this.label8.Size = new System.Drawing.Size(48, 25);
             this.label8.TabIndex = 20;
             this.label8.Text = "Cost";
             // 
             // byCostButton
             // 
-            this.byCostButton.Location = new System.Drawing.Point(302, 144);
+            this.byCostButton.Location = new System.Drawing.Point(431, 240);
+            this.byCostButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.byCostButton.Name = "byCostButton";
-            this.byCostButton.Size = new System.Drawing.Size(118, 47);
+            this.byCostButton.Size = new System.Drawing.Size(169, 78);
             this.byCostButton.TabIndex = 19;
             this.byCostButton.Text = "Search by cos";
             this.byCostButton.UseVisualStyleBackColor = true;
@@ -242,17 +269,19 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(302, 200);
+            this.label9.Location = new System.Drawing.Point(431, 333);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 15);
+            this.label9.Size = new System.Drawing.Size(111, 25);
             this.label9.TabIndex = 23;
             this.label9.Text = "Number Left";
             // 
             // byNumLeftButton
             // 
-            this.byNumLeftButton.Location = new System.Drawing.Point(302, 247);
+            this.byNumLeftButton.Location = new System.Drawing.Point(431, 412);
+            this.byNumLeftButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.byNumLeftButton.Name = "byNumLeftButton";
-            this.byNumLeftButton.Size = new System.Drawing.Size(118, 47);
+            this.byNumLeftButton.Size = new System.Drawing.Size(169, 78);
             this.byNumLeftButton.TabIndex = 22;
             this.byNumLeftButton.Text = "Search by number of left tickets";
             this.byNumLeftButton.UseVisualStyleBackColor = true;
@@ -261,17 +290,19 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(302, 307);
+            this.label10.Location = new System.Drawing.Point(431, 512);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(77, 15);
+            this.label10.Size = new System.Drawing.Size(118, 25);
             this.label10.TabIndex = 26;
             this.label10.Text = "Number Sold";
             // 
             // byNumSoldButton
             // 
-            this.byNumSoldButton.Location = new System.Drawing.Point(302, 354);
+            this.byNumSoldButton.Location = new System.Drawing.Point(431, 590);
+            this.byNumSoldButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.byNumSoldButton.Name = "byNumSoldButton";
-            this.byNumSoldButton.Size = new System.Drawing.Size(118, 47);
+            this.byNumSoldButton.Size = new System.Drawing.Size(169, 78);
             this.byNumSoldButton.TabIndex = 25;
             this.byNumSoldButton.Text = "Search by number of sold tickets";
             this.byNumSoldButton.UseVisualStyleBackColor = true;
@@ -279,9 +310,10 @@
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(11, 417);
+            this.backButton.Location = new System.Drawing.Point(16, 695);
+            this.backButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(409, 38);
+            this.backButton.Size = new System.Drawing.Size(584, 63);
             this.backButton.TabIndex = 28;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
@@ -289,16 +321,18 @@
             // 
             // numLeftNum
             // 
-            this.numLeftNum.Location = new System.Drawing.Point(302, 218);
+            this.numLeftNum.Location = new System.Drawing.Point(431, 363);
+            this.numLeftNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numLeftNum.Name = "numLeftNum";
-            this.numLeftNum.Size = new System.Drawing.Size(118, 23);
+            this.numLeftNum.Size = new System.Drawing.Size(169, 31);
             this.numLeftNum.TabIndex = 29;
             // 
             // numSoldNum
             // 
-            this.numSoldNum.Location = new System.Drawing.Point(302, 325);
+            this.numSoldNum.Location = new System.Drawing.Point(431, 542);
+            this.numSoldNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numSoldNum.Name = "numSoldNum";
-            this.numSoldNum.Size = new System.Drawing.Size(118, 23);
+            this.numSoldNum.Size = new System.Drawing.Size(169, 31);
             this.numSoldNum.TabIndex = 30;
             // 
             // typeComboBox
@@ -308,9 +342,10 @@
             "S",
             "M",
             "L"});
-            this.typeComboBox.Location = new System.Drawing.Point(12, 218);
+            this.typeComboBox.Location = new System.Drawing.Point(17, 363);
+            this.typeComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.typeComboBox.Name = "typeComboBox";
-            this.typeComboBox.Size = new System.Drawing.Size(117, 23);
+            this.typeComboBox.Size = new System.Drawing.Size(165, 33);
             this.typeComboBox.TabIndex = 31;
             this.typeComboBox.SelectedIndexChanged += new System.EventHandler(this.typeComboBox_SelectedIndexChanged);
             // 
@@ -324,16 +359,24 @@
             "Minsk",
             "Mogilev",
             "Vitebsk"});
-            this.destComboBox2.Location = new System.Drawing.Point(12, 324);
+            this.destComboBox2.Location = new System.Drawing.Point(17, 540);
+            this.destComboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.destComboBox2.Name = "destComboBox2";
-            this.destComboBox2.Size = new System.Drawing.Size(117, 23);
+            this.destComboBox2.Size = new System.Drawing.Size(165, 33);
             this.destComboBox2.TabIndex = 32;
+            // 
+            // sqliteCommand1
+            // 
+            this.sqliteCommand1.CommandTimeout = 30;
+            this.sqliteCommand1.Connection = null;
+            this.sqliteCommand1.Transaction = null;
+            this.sqliteCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
             // 
             // SearchDataForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 464);
+            this.ClientSize = new System.Drawing.Size(623, 773);
             this.Controls.Add(this.destComboBox2);
             this.Controls.Add(this.typeComboBox);
             this.Controls.Add(this.numSoldNum);
@@ -363,6 +406,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.byNumberButton);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SearchDataForm";
             this.Text = "SearchDataForm";
             ((System.ComponentModel.ISupportInitialize)(this.numLeftNum)).EndInit();
@@ -403,5 +447,6 @@
         private NumericUpDown numSoldNum;
         private ComboBox typeComboBox;
         private ComboBox destComboBox2;
+        private Microsoft.Data.Sqlite.SqliteCommand sqliteCommand1;
     }
 }

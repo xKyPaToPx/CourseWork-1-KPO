@@ -99,6 +99,7 @@ partial class LogForm
             this.passwordText.Location = new System.Drawing.Point(64, 242);
             this.passwordText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.passwordText.Name = "passwordText";
+            this.passwordText.PasswordChar = '*';
             this.passwordText.Size = new System.Drawing.Size(278, 26);
             this.passwordText.TabIndex = 5;
             // 

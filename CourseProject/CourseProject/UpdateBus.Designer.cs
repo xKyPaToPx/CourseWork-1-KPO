@@ -139,7 +139,8 @@
             // 
             this.newDepTimeTExt.Location = new System.Drawing.Point(443, 183);
             this.newDepTimeTExt.Name = "newDepTimeTExt";
-            this.newDepTimeTExt.Size = new System.Drawing.Size(150, 31);
+            this.newDepTimeTExt.PlaceholderText = "HH:MM";
+            this.newDepTimeTExt.Size = new System.Drawing.Size(183, 31);
             this.newDepTimeTExt.TabIndex = 26;
             // 
             // newNumLeftUpDown
@@ -153,14 +154,16 @@
             // 
             this.newCostText.Location = new System.Drawing.Point(446, 332);
             this.newCostText.Name = "newCostText";
-            this.newCostText.Size = new System.Drawing.Size(150, 31);
+            this.newCostText.PlaceholderText = "X.X";
+            this.newCostText.Size = new System.Drawing.Size(180, 31);
             this.newCostText.TabIndex = 24;
             // 
             // newArrTimeText
             // 
             this.newArrTimeText.Location = new System.Drawing.Point(443, 260);
             this.newArrTimeText.Name = "newArrTimeText";
-            this.newArrTimeText.Size = new System.Drawing.Size(150, 31);
+            this.newArrTimeText.PlaceholderText = "HH:MM";
+            this.newArrTimeText.Size = new System.Drawing.Size(183, 31);
             this.newArrTimeText.TabIndex = 23;
             // 
             // newDestBox
@@ -194,14 +197,16 @@
             // 
             this.newDepDateText.Location = new System.Drawing.Point(29, 477);
             this.newDepDateText.Name = "newDepDateText";
-            this.newDepDateText.Size = new System.Drawing.Size(150, 31);
+            this.newDepDateText.PlaceholderText = "MM/DD/YY";
+            this.newDepDateText.Size = new System.Drawing.Size(183, 31);
             this.newDepDateText.TabIndex = 20;
             // 
             // newNumberText
             // 
-            this.newNumberText.Location = new System.Drawing.Point(29, 258);
+            this.newNumberText.Location = new System.Drawing.Point(29, 257);
             this.newNumberText.Name = "newNumberText";
-            this.newNumberText.Size = new System.Drawing.Size(150, 31);
+            this.newNumberText.PlaceholderText = "XXXX";
+            this.newNumberText.Size = new System.Drawing.Size(183, 31);
             this.newNumberText.TabIndex = 19;
             // 
             // label1
@@ -228,14 +233,15 @@
             // 
             this.numberText.Location = new System.Drawing.Point(29, 185);
             this.numberText.Name = "numberText";
-            this.numberText.Size = new System.Drawing.Size(150, 31);
+            this.numberText.PlaceholderText = "XXXX";
+            this.numberText.Size = new System.Drawing.Size(183, 31);
             this.numberText.TabIndex = 37;
             // 
             // newNumberButton
             // 
-            this.newNumberButton.Location = new System.Drawing.Point(217, 257);
+            this.newNumberButton.Location = new System.Drawing.Point(251, 257);
             this.newNumberButton.Name = "newNumberButton";
-            this.newNumberButton.Size = new System.Drawing.Size(179, 33);
+            this.newNumberButton.Size = new System.Drawing.Size(145, 33);
             this.newNumberButton.TabIndex = 38;
             this.newNumberButton.Text = "Edit Number";
             this.newNumberButton.UseVisualStyleBackColor = true;
@@ -263,9 +269,9 @@
             // 
             // newDepDateButton
             // 
-            this.newDepDateButton.Location = new System.Drawing.Point(217, 473);
+            this.newDepDateButton.Location = new System.Drawing.Point(251, 473);
             this.newDepDateButton.Name = "newDepDateButton";
-            this.newDepDateButton.Size = new System.Drawing.Size(179, 33);
+            this.newDepDateButton.Size = new System.Drawing.Size(145, 33);
             this.newDepDateButton.TabIndex = 41;
             this.newDepDateButton.Text = "Edit Deprature Date";
             this.newDepDateButton.UseVisualStyleBackColor = true;
@@ -273,9 +279,9 @@
             // 
             // newDepTimeButton
             // 
-            this.newDepTimeButton.Location = new System.Drawing.Point(624, 182);
+            this.newDepTimeButton.Location = new System.Drawing.Point(657, 182);
             this.newDepTimeButton.Name = "newDepTimeButton";
-            this.newDepTimeButton.Size = new System.Drawing.Size(181, 33);
+            this.newDepTimeButton.Size = new System.Drawing.Size(148, 33);
             this.newDepTimeButton.TabIndex = 42;
             this.newDepTimeButton.Text = "Edit Departure Time";
             this.newDepTimeButton.UseVisualStyleBackColor = true;
@@ -283,9 +289,9 @@
             // 
             // newArrTimeButton
             // 
-            this.newArrTimeButton.Location = new System.Drawing.Point(624, 258);
+            this.newArrTimeButton.Location = new System.Drawing.Point(657, 258);
             this.newArrTimeButton.Name = "newArrTimeButton";
-            this.newArrTimeButton.Size = new System.Drawing.Size(181, 33);
+            this.newArrTimeButton.Size = new System.Drawing.Size(148, 33);
             this.newArrTimeButton.TabIndex = 43;
             this.newArrTimeButton.Text = "Edit Arrival Time";
             this.newArrTimeButton.UseVisualStyleBackColor = true;
@@ -293,9 +299,9 @@
             // 
             // newCostButton
             // 
-            this.newCostButton.Location = new System.Drawing.Point(624, 328);
+            this.newCostButton.Location = new System.Drawing.Point(657, 328);
             this.newCostButton.Name = "newCostButton";
-            this.newCostButton.Size = new System.Drawing.Size(181, 33);
+            this.newCostButton.Size = new System.Drawing.Size(148, 33);
             this.newCostButton.TabIndex = 44;
             this.newCostButton.Text = "Edit Cost";
             this.newCostButton.UseVisualStyleBackColor = true;

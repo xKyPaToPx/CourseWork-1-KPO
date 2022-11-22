@@ -45,7 +45,6 @@ D:\Git\CourseWork-1-KPO\CourseProject\CourseProject\obj\Release\net6.0-windows\C
 D:\Git\CourseWork-1-KPO\CourseProject\CourseProject\obj\Release\net6.0-windows\CourseProject.ShowDB.resources
 D:\Git\CourseWork-1-KPO\CourseProject\CourseProject\obj\Release\net6.0-windows\CourseProject.UpdateBus.resources
 D:\Git\CourseWork-1-KPO\CourseProject\CourseProject\obj\Release\net6.0-windows\CourseProject.UpdateUser.resources
-D:\Git\CourseWork-1-KPO\CourseProject\CourseProject\obj\Release\net6.0-windows\CourseProject.UserForm.resources
 D:\Git\CourseWork-1-KPO\CourseProject\CourseProject\obj\Release\net6.0-windows\CourseProject.csproj.GenerateResource.cache
 D:\Git\CourseWork-1-KPO\CourseProject\CourseProject\obj\Release\net6.0-windows\CourseProject.GeneratedMSBuildEditorConfig.editorconfig
 D:\Git\CourseWork-1-KPO\CourseProject\CourseProject\obj\Release\net6.0-windows\CourseProject.AssemblyInfoInputs.cache
@@ -57,3 +56,4 @@ D:\Git\CourseWork-1-KPO\CourseProject\CourseProject\obj\Release\net6.0-windows\r
 D:\Git\CourseWork-1-KPO\CourseProject\CourseProject\obj\Release\net6.0-windows\CourseProject.pdb
 D:\Git\CourseWork-1-KPO\CourseProject\CourseProject\obj\Release\net6.0-windows\CourseProject.genruntimeconfig.cache
 D:\Git\CourseWork-1-KPO\CourseProject\CourseProject\obj\Release\net6.0-windows\ref\CourseProject.dll
+D:\Git\CourseWork-1-KPO\CourseProject\CourseProject\obj\Release\net6.0-windows\CourseProject.ShowBusesUser.resources

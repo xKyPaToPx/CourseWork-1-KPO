@@ -5,7 +5,8 @@ namespace CourseProject;
 
 public partial class Form1 : Form
 {
-    public static string dbPath = "Data Source=../../../../database.db";
+    public static string dbPath = "Data Source=database.db";
+    //public static string dbPath = "Data Source=../../../../database.db";
     LogForm logForm;
     RegForm regForm;
     AdminForm adminForm;
@@ -50,12 +51,14 @@ public partial class Form1 : Form
         switch (role)
         {
             case 0:
-                UserForm userForm = new UserForm();
+                ShowBusesUser userForm = new ShowBusesUser();
                 userForm.Show();
+                
                 break;
             case 1:
                 adminForm = new AdminForm();
                 adminForm.Show();
+                
                 break;
         }
 
@@ -72,7 +75,7 @@ public partial class Form1 : Form
     {
         if(RegForm.regComp)
         {
-            UserForm userForm = new UserForm();
+            ShowBusesUser userForm = new ShowBusesUser();
             userForm.Show();
         }
         
@@ -82,5 +85,10 @@ public partial class Form1 : Form
     {
         DialogResult dialog = MessageBox.Show("Go out?","Question",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
         if (dialog == DialogResult.Yes) { Close(); }
+    }
+
+    private void label1_Click(object sender, EventArgs e)
+    {
+
     }
 }

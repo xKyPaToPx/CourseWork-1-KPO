@@ -40,7 +40,8 @@ namespace CourseProject
                     command.Connection = connection;
                     command.CommandText = $"INSERT INTO bus_info (number, type, dest, dep_date, dep_time, arr_time, cost, num_left, num_sold) VALUES ({number}, '{type}', '{dest}', '{depDate}', '{depTime}', '{arrTime}', {cost},{numLeft},{numSold})";
                     number = command.ExecuteNonQuery();
-                    MessageBox.Show("Seccess","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    
+                    MessageBox.Show("Success","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     Close();
 
                 }

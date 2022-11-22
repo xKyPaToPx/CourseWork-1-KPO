@@ -69,6 +69,7 @@
             // 
             this.numberText.Location = new System.Drawing.Point(21, 148);
             this.numberText.Name = "numberText";
+            this.numberText.PlaceholderText = "XXXX";
             this.numberText.Size = new System.Drawing.Size(308, 31);
             this.numberText.TabIndex = 3;
             // 

@@ -1,6 +1,6 @@
 ﻿namespace CourseProject
 {
-    partial class ShowBusesForm
+    partial class ShowBusesUser
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.updateGrid = new System.Windows.Forms.Button();
+            this.searchDataButton = new System.Windows.Forms.Button();
+            this.buyTicketButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.busesGrid = new System.Windows.Forms.DataGridView();
             this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,15 +42,48 @@
             this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.num_left = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.num_sold = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.backButton = new System.Windows.Forms.Button();
-            this.searchDataButton = new System.Windows.Forms.Button();
-            this.buyTicketButton = new System.Windows.Forms.Button();
-            this.removeBusButton = new System.Windows.Forms.Button();
-            this.updateBusButton = new System.Windows.Forms.Button();
-            this.addNewBus = new System.Windows.Forms.Button();
-            this.updateGrid = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.busesGrid)).BeginInit();
             this.SuspendLayout();
+            // 
+            // updateGrid
+            // 
+            this.updateGrid.Location = new System.Drawing.Point(1091, 543);
+            this.updateGrid.Name = "updateGrid";
+            this.updateGrid.Size = new System.Drawing.Size(165, 83);
+            this.updateGrid.TabIndex = 26;
+            this.updateGrid.Text = "Update";
+            this.updateGrid.UseVisualStyleBackColor = true;
+            this.updateGrid.Click += new System.EventHandler(this.updateGrid_Click);
+            // 
+            // searchDataButton
+            // 
+            this.searchDataButton.Location = new System.Drawing.Point(183, 543);
+            this.searchDataButton.Name = "searchDataButton";
+            this.searchDataButton.Size = new System.Drawing.Size(165, 83);
+            this.searchDataButton.TabIndex = 25;
+            this.searchDataButton.Text = "Search Data";
+            this.searchDataButton.UseVisualStyleBackColor = true;
+            this.searchDataButton.Click += new System.EventHandler(this.searchDataButton_Click);
+            // 
+            // buyTicketButton
+            // 
+            this.buyTicketButton.Location = new System.Drawing.Point(12, 543);
+            this.buyTicketButton.Name = "buyTicketButton";
+            this.buyTicketButton.Size = new System.Drawing.Size(165, 83);
+            this.buyTicketButton.TabIndex = 24;
+            this.buyTicketButton.Text = "Buy a Ticket";
+            this.buyTicketButton.UseVisualStyleBackColor = true;
+            this.buyTicketButton.Click += new System.EventHandler(this.buyTicketButton_Click);
+            // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(1262, 543);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(165, 83);
+            this.backButton.TabIndex = 20;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // busesGrid
             // 
@@ -63,14 +100,13 @@
             this.cost,
             this.num_left,
             this.num_sold});
-            this.busesGrid.Location = new System.Drawing.Point(13, 23);
+            this.busesGrid.Location = new System.Drawing.Point(12, 12);
             this.busesGrid.Name = "busesGrid";
             this.busesGrid.ReadOnly = true;
             this.busesGrid.RowHeadersWidth = 62;
             this.busesGrid.RowTemplate.Height = 33;
             this.busesGrid.Size = new System.Drawing.Size(1415, 525);
-            this.busesGrid.TabIndex = 0;
-            this.busesGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.busesGrid_CellContentClick);
+            this.busesGrid.TabIndex = 19;
             // 
             // number
             // 
@@ -144,95 +180,19 @@
             this.num_sold.ReadOnly = true;
             this.num_sold.Width = 150;
             // 
-            // backButton
-            // 
-            this.backButton.Location = new System.Drawing.Point(1263, 554);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(165, 83);
-            this.backButton.TabIndex = 1;
-            this.backButton.Text = "Back";
-            this.backButton.UseVisualStyleBackColor = true;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
-            // searchDataButton
-            // 
-            this.searchDataButton.Location = new System.Drawing.Point(356, 554);
-            this.searchDataButton.Name = "searchDataButton";
-            this.searchDataButton.Size = new System.Drawing.Size(165, 83);
-            this.searchDataButton.TabIndex = 17;
-            this.searchDataButton.Text = "Search Data";
-            this.searchDataButton.UseVisualStyleBackColor = true;
-            this.searchDataButton.Click += new System.EventHandler(this.searchDataButton_Click);
-            // 
-            // buyTicketButton
-            // 
-            this.buyTicketButton.Location = new System.Drawing.Point(185, 554);
-            this.buyTicketButton.Name = "buyTicketButton";
-            this.buyTicketButton.Size = new System.Drawing.Size(165, 83);
-            this.buyTicketButton.TabIndex = 16;
-            this.buyTicketButton.Text = "Buy a Ticket";
-            this.buyTicketButton.UseVisualStyleBackColor = true;
-            this.buyTicketButton.Click += new System.EventHandler(this.buyTicketButton_Click);
-            // 
-            // removeBusButton
-            // 
-            this.removeBusButton.Location = new System.Drawing.Point(701, 554);
-            this.removeBusButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.removeBusButton.Name = "removeBusButton";
-            this.removeBusButton.Size = new System.Drawing.Size(165, 83);
-            this.removeBusButton.TabIndex = 15;
-            this.removeBusButton.Text = "Remove Bus";
-            this.removeBusButton.UseVisualStyleBackColor = true;
-            this.removeBusButton.Click += new System.EventHandler(this.removeBusButton_Click);
-            // 
-            // updateBusButton
-            // 
-            this.updateBusButton.Location = new System.Drawing.Point(528, 554);
-            this.updateBusButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.updateBusButton.Name = "updateBusButton";
-            this.updateBusButton.Size = new System.Drawing.Size(165, 83);
-            this.updateBusButton.TabIndex = 14;
-            this.updateBusButton.Text = "Update Bus";
-            this.updateBusButton.UseVisualStyleBackColor = true;
-            this.updateBusButton.Click += new System.EventHandler(this.updateBusButton_Click);
-            // 
-            // addNewBus
-            // 
-            this.addNewBus.Location = new System.Drawing.Point(13, 554);
-            this.addNewBus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.addNewBus.Name = "addNewBus";
-            this.addNewBus.Size = new System.Drawing.Size(165, 83);
-            this.addNewBus.TabIndex = 13;
-            this.addNewBus.Text = "Add New Bus";
-            this.addNewBus.UseVisualStyleBackColor = true;
-            this.addNewBus.Click += new System.EventHandler(this.addNewBus_Click);
-            // 
-            // updateGrid
-            // 
-            this.updateGrid.Location = new System.Drawing.Point(1092, 554);
-            this.updateGrid.Name = "updateGrid";
-            this.updateGrid.Size = new System.Drawing.Size(165, 83);
-            this.updateGrid.TabIndex = 18;
-            this.updateGrid.Text = "Update";
-            this.updateGrid.UseVisualStyleBackColor = true;
-            this.updateGrid.Click += new System.EventHandler(this.updateGrid_Click);
-            // 
-            // ShowBusesForm
+            // ShowBusesUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 646);
+            this.ClientSize = new System.Drawing.Size(1437, 640);
             this.Controls.Add(this.updateGrid);
             this.Controls.Add(this.searchDataButton);
             this.Controls.Add(this.buyTicketButton);
-            this.Controls.Add(this.removeBusButton);
-            this.Controls.Add(this.updateBusButton);
-            this.Controls.Add(this.addNewBus);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.busesGrid);
-            this.Name = "ShowBusesForm";
-            this.Text = "ShowBusesForm";
-            this.Load += new System.EventHandler(this.ShowBusesForm_Load);
+            this.Name = "ShowBusesUser";
+            this.Text = "ShowBusesUser";
+            this.Load += new System.EventHandler(this.ShowBusesUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.busesGrid)).EndInit();
             this.ResumeLayout(false);
 
@@ -240,6 +200,10 @@
 
         #endregion
 
+        private Button updateGrid;
+        private Button searchDataButton;
+        private Button buyTicketButton;
+        private Button backButton;
         private DataGridView busesGrid;
         private DataGridViewTextBoxColumn number;
         private DataGridViewTextBoxColumn type;
@@ -250,12 +214,5 @@
         private DataGridViewTextBoxColumn cost;
         private DataGridViewTextBoxColumn num_left;
         private DataGridViewTextBoxColumn num_sold;
-        private Button backButton;
-        private Button searchDataButton;
-        private Button buyTicketButton;
-        private Button removeBusButton;
-        private Button updateBusButton;
-        private Button addNewBus;
-        private Button updateGrid;
     }
 }

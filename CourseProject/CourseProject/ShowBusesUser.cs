@@ -11,55 +11,11 @@ using System.Windows.Forms;
 
 namespace CourseProject
 {
-    
-    public partial class ShowBusesForm : Form
+    public partial class ShowBusesUser : Form
     {
-        
-        public ShowBusesForm()
+        public ShowBusesUser()
         {
             InitializeComponent();
-        }
-
-        private void ShowBusesForm_Load(object sender, EventArgs e)
-        {
-            UpdateDB();
-        }
-
-        
-
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void busesGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-       
-        public void updateBusButton_Click(object sender, EventArgs e)
-        {
-            UpdateBus updateBus = new UpdateBus();
-            updateBus.Show();
-        }
-
-        private void addNewBus_Click(object sender, EventArgs e)
-        {
-            AddNewBusForm addNewBusForm = new AddNewBusForm();
-            addNewBusForm.Show();   
-        }
-
-        private void removeBusButton_Click(object sender, EventArgs e)
-        {
-            RemoveBusForm removeBusForm = new RemoveBusForm();
-            removeBusForm.Show();
-        }
-
-        private void searchDataButton_Click(object sender, EventArgs e)
-        {
-            SearchDataForm searchDataForm = new SearchDataForm();
-            searchDataForm.Show();
         }
 
         private void buyTicketButton_Click(object sender, EventArgs e)
@@ -68,10 +24,18 @@ namespace CourseProject
             buyTicketForm.Show();
         }
 
-        private void updateGrid_Click(object sender, EventArgs e)
+        private void searchDataButton_Click(object sender, EventArgs e)
         {
-            UpdateDB();
+            SearchDataForm searchDataForm = new SearchDataForm();
+            searchDataForm.Show();
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Come back?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialog == DialogResult.Yes) { Close(); }
+        }
+
         private void UpdateDB()
         {
             busesGrid.Rows.Clear();
@@ -101,6 +65,15 @@ namespace CourseProject
                     }
                 }
             }
+        }
+        private void ShowBusesUser_Load(object sender, EventArgs e)
+        {
+            UpdateDB();
+        }
+
+        private void updateGrid_Click(object sender, EventArgs e)
+        {
+            UpdateDB();
         }
     }
 }

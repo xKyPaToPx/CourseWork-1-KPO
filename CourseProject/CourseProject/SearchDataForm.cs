@@ -77,13 +77,13 @@ namespace CourseProject
 
         private void byNumSoldButton_Click(object sender, EventArgs e)
         {
-            string sqlExpression = $"SELECT * FROM bus_info WHERE number = '{numSoldNum.Text}'";
+            string sqlExpression = $"SELECT * FROM bus_info WHERE num_sold = '{numSoldNum.Text}'";
             SearchGrid(sqlExpression);
         }
 
         private void byDestButton_Click(object sender, EventArgs e)
         {
-            string sqlExpression = $"SELECT * FROM bus_info WHERE number = '{destComboBox2.Text}'";
+            string sqlExpression = $"SELECT * FROM bus_info WHERE dest = '{destComboBox2.Text}'";
             SearchGrid(sqlExpression);
         }
 
