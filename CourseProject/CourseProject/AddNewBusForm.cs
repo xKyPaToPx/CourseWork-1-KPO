@@ -36,7 +36,7 @@ namespace CourseProject
                     double cost = Convert.ToDouble(costText.Text);
                     int numLeft = Convert.ToInt32(numLeftUpDown.Value);
                     int numSold = 0;
-
+                    
                     command.Connection = connection;
                     command.CommandText = $"INSERT INTO bus_info (number, type, dest, dep_date, dep_time, arr_time, cost, num_left, num_sold) VALUES ({number}, '{type}', '{dest}', '{depDate}', '{depTime}', '{arrTime}', {cost},{numLeft},{numSold})";
                     number = command.ExecuteNonQuery();
@@ -56,6 +56,11 @@ namespace CourseProject
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

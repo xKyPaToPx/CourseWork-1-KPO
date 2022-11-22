@@ -52,9 +52,9 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(41, 404);
+            this.addButton.Location = new System.Drawing.Point(254, 404);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(112, 34);
+            this.addButton.Size = new System.Drawing.Size(180, 34);
             this.addButton.TabIndex = 0;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
@@ -218,12 +218,13 @@
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(322, 404);
+            this.backButton.Location = new System.Drawing.Point(41, 404);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(112, 34);
+            this.backButton.Size = new System.Drawing.Size(182, 34);
             this.backButton.TabIndex = 19;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // AddNewBusForm
             // 

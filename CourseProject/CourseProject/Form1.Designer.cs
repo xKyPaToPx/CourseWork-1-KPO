@@ -38,7 +38,7 @@ partial class Form1
             // logButton
             // 
             this.logButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.logButton.Location = new System.Drawing.Point(42, 109);
+            this.logButton.Location = new System.Drawing.Point(42, 132);
             this.logButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.logButton.Name = "logButton";
             this.logButton.Size = new System.Drawing.Size(304, 68);
@@ -50,7 +50,7 @@ partial class Form1
             // regButton
             // 
             this.regButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.regButton.Location = new System.Drawing.Point(42, 187);
+            this.regButton.Location = new System.Drawing.Point(42, 210);
             this.regButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.regButton.Name = "regButton";
             this.regButton.Size = new System.Drawing.Size(304, 68);
