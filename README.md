@@ -9,3 +9,6 @@
     fix - gui (form1)
     fix - functionality (AddNewBus(Back button))
     
+1.3 Error update
+    improved fault tolerance
+    
