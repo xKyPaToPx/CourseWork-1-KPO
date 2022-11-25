@@ -126,6 +126,7 @@
             // 
             // newRoleBox
             // 
+            this.newRoleBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.newRoleBox.FormattingEnabled = true;
             this.newRoleBox.Items.AddRange(new object[] {
             "Standart",

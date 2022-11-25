@@ -32,21 +32,21 @@ namespace CourseProject
                     int role = roleBox.SelectedIndex;
                     if (CheckUserInfo(nickname))
                     {
-                        MessageBox.Show("This nickname is taken","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        AddNewBusForm.ErrMsg("Nickname is taken");
                     }
                     else
                     {
                         command.Connection = connection;
                         command.CommandText = $"INSERT INTO user_info (nickname, password, role) VALUES ('{nickname}', '{password}', {role})";
                         int number = command.ExecuteNonQuery();
-                        MessageBox.Show("Success","Informatoin",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        AddNewBusForm.InfMsg("Success");
                         Close();
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Username and password must be more than 3 characters, and role must be not null","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                AddNewBusForm.ErrMsg("Username and password must be more than 3 characters, and role must be not null");
             }
             
         }

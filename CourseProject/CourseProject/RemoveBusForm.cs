@@ -25,26 +25,34 @@ namespace CourseProject
 
         private void removeButton_Click(object sender, EventArgs e)
         {
-            int number = Convert.ToInt32(numberText.Text);
-            if (CheckBusInfo(number))
+            int number;
+            if(int.TryParse(numberText.Text,out number))
             {
-                string sqlExpression = $"DELETE FROM bus_info WHERE number='{number}'";
-                using (var connection = new SqliteConnection(Form1.dbPath))
+                if (CheckBusInfo(number))
                 {
-                    connection.Open();
-                    SqliteCommand command = new SqliteCommand(sqlExpression, connection);
-                    command.ExecuteNonQuery();
+                    string sqlExpression = $"DELETE FROM bus_info WHERE number='{number}'";
+                    using (var connection = new SqliteConnection(Form1.dbPath))
+                    {
+                        connection.Open();
+                        SqliteCommand command = new SqliteCommand(sqlExpression, connection);
+                        command.ExecuteNonQuery();
+                    }
+                    AddNewBusForm.InfMsg("Remove is success");
+                    
                 }
-                MessageBox.Show("Remove is success");
+                else
+                {
+                    AddNewBusForm.ErrMsg("User isn't found");
+                }
+                Close();
             }
             else
             {
-                MessageBox.Show("User isn't found");
+                AddNewBusForm.ErrMsg("Number it's incorrect");
             }
-            Close();
         }
 
-        public bool CheckBusInfo(int number)
+        public static bool CheckBusInfo(int number)
         {
             string sqlExpression = $"SELECT * FROM bus_info WHERE number='{number}'";
             using (var connection = new SqliteConnection(Form1.dbPath))
@@ -65,5 +73,7 @@ namespace CourseProject
                 }
             }
         }
+
+        
     }
 }

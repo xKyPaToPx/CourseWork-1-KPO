@@ -65,6 +65,7 @@
             this.numberText.PlaceholderText = "XXXX";
             this.numberText.Size = new System.Drawing.Size(294, 31);
             this.numberText.TabIndex = 2;
+            
             // 
             // label1
             // 

@@ -36,13 +36,10 @@
             this.byTypeButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.byDestButton = new System.Windows.Forms.Button();
-            this.depDataText = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.byDepDataButton = new System.Windows.Forms.Button();
-            this.depTimeText = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.byDepTimeButton = new System.Windows.Forms.Button();
-            this.arrTimeText = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.byArrTimeButton = new System.Windows.Forms.Button();
             this.costText = new System.Windows.Forms.TextBox();
@@ -58,6 +55,9 @@
             this.typeComboBox = new System.Windows.Forms.ComboBox();
             this.destComboBox2 = new System.Windows.Forms.ComboBox();
             this.sqliteCommand1 = new Microsoft.Data.Sqlite.SqliteCommand();
+            this.depDatePic = new System.Windows.Forms.DateTimePicker();
+            this.arrTimePic = new System.Windows.Forms.DateTimePicker();
+            this.depTimePic = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.numLeftNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoldNum)).BeginInit();
             this.SuspendLayout();
@@ -146,15 +146,6 @@
             this.byDestButton.UseVisualStyleBackColor = true;
             this.byDestButton.Click += new System.EventHandler(this.byDestButton_Click);
             // 
-            // depDataText
-            // 
-            this.depDataText.Location = new System.Drawing.Point(223, 192);
-            this.depDataText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.depDataText.Name = "depDataText";
-            this.depDataText.PlaceholderText = "MM/DD/YY";
-            this.depDataText.Size = new System.Drawing.Size(167, 31);
-            this.depDataText.TabIndex = 12;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -176,15 +167,6 @@
             this.byDepDataButton.UseVisualStyleBackColor = true;
             this.byDepDataButton.Click += new System.EventHandler(this.byDepDataButton_Click);
             // 
-            // depTimeText
-            // 
-            this.depTimeText.Location = new System.Drawing.Point(223, 363);
-            this.depTimeText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.depTimeText.Name = "depTimeText";
-            this.depTimeText.PlaceholderText = "HH:MM";
-            this.depTimeText.Size = new System.Drawing.Size(167, 31);
-            this.depTimeText.TabIndex = 15;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -205,15 +187,6 @@
             this.byDepTimeButton.Text = "Search by departure time";
             this.byDepTimeButton.UseVisualStyleBackColor = true;
             this.byDepTimeButton.Click += new System.EventHandler(this.byDepTimeButton_Click);
-            // 
-            // arrTimeText
-            // 
-            this.arrTimeText.Location = new System.Drawing.Point(223, 542);
-            this.arrTimeText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.arrTimeText.Name = "arrTimeText";
-            this.arrTimeText.PlaceholderText = "HH:MM";
-            this.arrTimeText.Size = new System.Drawing.Size(167, 31);
-            this.arrTimeText.TabIndex = 18;
             // 
             // label7
             // 
@@ -337,6 +310,7 @@
             // 
             // typeComboBox
             // 
+            this.typeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.typeComboBox.FormattingEnabled = true;
             this.typeComboBox.Items.AddRange(new object[] {
             "S",
@@ -351,6 +325,7 @@
             // 
             // destComboBox2
             // 
+            this.destComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.destComboBox2.FormattingEnabled = true;
             this.destComboBox2.Items.AddRange(new object[] {
             "Brest",
@@ -372,11 +347,40 @@
             this.sqliteCommand1.Transaction = null;
             this.sqliteCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
             // 
+            // depDatePic
+            // 
+            this.depDatePic.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.depDatePic.Location = new System.Drawing.Point(225, 192);
+            this.depDatePic.Name = "depDatePic";
+            this.depDatePic.Size = new System.Drawing.Size(167, 31);
+            this.depDatePic.TabIndex = 33;
+            // 
+            // arrTimePic
+            // 
+            this.arrTimePic.CustomFormat = "hh:mm tt";
+            this.arrTimePic.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.arrTimePic.Location = new System.Drawing.Point(223, 542);
+            this.arrTimePic.Name = "arrTimePic";
+            this.arrTimePic.Size = new System.Drawing.Size(167, 31);
+            this.arrTimePic.TabIndex = 34;
+            // 
+            // depTimePic
+            // 
+            this.depTimePic.CustomFormat = "hh:mm tt";
+            this.depTimePic.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.depTimePic.Location = new System.Drawing.Point(225, 363);
+            this.depTimePic.Name = "depTimePic";
+            this.depTimePic.Size = new System.Drawing.Size(167, 31);
+            this.depTimePic.TabIndex = 35;
+            // 
             // SearchDataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 773);
+            this.ClientSize = new System.Drawing.Size(618, 773);
+            this.Controls.Add(this.depTimePic);
+            this.Controls.Add(this.arrTimePic);
+            this.Controls.Add(this.depDatePic);
             this.Controls.Add(this.destComboBox2);
             this.Controls.Add(this.typeComboBox);
             this.Controls.Add(this.numSoldNum);
@@ -389,13 +393,10 @@
             this.Controls.Add(this.costText);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.byCostButton);
-            this.Controls.Add(this.arrTimeText);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.byArrTimeButton);
-            this.Controls.Add(this.depTimeText);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.byDepTimeButton);
-            this.Controls.Add(this.depDataText);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.byDepDataButton);
             this.Controls.Add(this.label4);
@@ -409,6 +410,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SearchDataForm";
             this.Text = "SearchDataForm";
+            this.Load += new System.EventHandler(this.SearchDataForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numLeftNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoldNum)).EndInit();
             this.ResumeLayout(false);
@@ -426,13 +428,10 @@
         private Button byTypeButton;
         private Label label4;
         private Button byDestButton;
-        private TextBox depDataText;
         private Label label6;
         private Button byDepDataButton;
-        private TextBox depTimeText;
         private Label label5;
         private Button byDepTimeButton;
-        private TextBox arrTimeText;
         private Label label7;
         private Button byArrTimeButton;
         private TextBox costText;
@@ -448,5 +447,8 @@
         private ComboBox typeComboBox;
         private ComboBox destComboBox2;
         private Microsoft.Data.Sqlite.SqliteCommand sqliteCommand1;
+        private DateTimePicker depDatePic;
+        private DateTimePicker arrTimePic;
+        private DateTimePicker depTimePic;
     }
 }

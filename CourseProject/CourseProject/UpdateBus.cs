@@ -28,18 +28,13 @@ namespace CourseProject
         {
             if (numCheck())
             {
-                if (newDepTimeTExt.Text.Length == 5)
-                {
+                
                     string number = numberText.Text;
-                    string newDepTime = newDepTimeTExt.Text;
+                    string newDepTime = depTimePic.Value.ToShortTimeString();
                     string sqlExpression = $"UPDATE bus_info SET dep_time='{newDepTime}' WHERE number='{number}'";
                     Update(sqlExpression);
                     MessageBox.Show("Departure time is changed successfly", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Departure time must be hh:mm", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                
             }
             
             
@@ -69,7 +64,7 @@ namespace CourseProject
         {
             if(numCheck())
             {
-                if (newNumberText.Text.Length > 3)
+                if (newNumberText.Text.Length == 4 && int.TryParse(newNumberText.Text, out var temp))
                 {
                     string number = numberText.Text;
                     int newNumber = Convert.ToInt32(newNumberText.Text);
@@ -79,7 +74,7 @@ namespace CourseProject
                 }
                 else
                 {
-                    MessageBox.Show("Number must be more than 3 characters", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Number it's incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }    
             
@@ -132,18 +127,14 @@ namespace CourseProject
         {
             if(numCheck())
             {
-                if (newDepDateText.Text.Length == 8)
-                {
+                
                     string number = numberText.Text;
-                    string newDepDate = newDepDateText.Text;
+                    string newDepDate = depDatePic.Value.ToShortDateString();
                     string sqlExpression = $"UPDATE bus_info SET dep_date='{newDepDate}' WHERE number='{number}'";
                     Update(sqlExpression);
                     MessageBox.Show("Departure date is changed successfly", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Departure date must be mm/dd/yy", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                
+                
             }
             
             
@@ -153,18 +144,14 @@ namespace CourseProject
         {
             if(numCheck())
             {
-                if (newArrTimeText.Text.Length == 5)
-                {
+                
                     string number = numberText.Text;
-                    string newArrTime = newArrTimeText.Text;
+                    string newArrTime = depTimePic.Value.ToShortTimeString();
                     string sqlExpression = $"UPDATE bus_info SET arr_time='{newArrTime}' WHERE number='{number}'";
                     Update(sqlExpression);
                     MessageBox.Show("Arrival time is changed successfly", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Arrival time must be hh:mm", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                
+                
             }
             
             
@@ -174,7 +161,7 @@ namespace CourseProject
         {
             if (numCheck())
             {
-                if (newCostText.Text.Length != 0)
+                if (newCostText.Text.Length != 0 && double.TryParse(newCostText.Text,out var temp))
                 {
                     string number = numberText.Text;
                     double newCost = Convert.ToDouble(newCostText.Text);
@@ -236,12 +223,17 @@ namespace CourseProject
 
         bool numCheck()
         {
-            if(numberText.Text.Length < 4)
+            if (numberText.Text.Length < 4 && !int.TryParse(numberText.Text, out var temp))
             {
                 MessageBox.Show("Enter correct number","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return false;
             }
             return true;
+        }
+
+        private void numberText_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

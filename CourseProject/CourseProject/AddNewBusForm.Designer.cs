@@ -31,13 +31,10 @@
             this.addButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.numberText = new System.Windows.Forms.TextBox();
-            this.depDateText = new System.Windows.Forms.TextBox();
             this.typeBox = new System.Windows.Forms.ComboBox();
             this.destBox = new System.Windows.Forms.ComboBox();
-            this.arrTimeText = new System.Windows.Forms.TextBox();
             this.costText = new System.Windows.Forms.TextBox();
             this.numLeftUpDown = new System.Windows.Forms.NumericUpDown();
-            this.depTimeTExt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,6 +44,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
+            this.depDatePic = new System.Windows.Forms.DateTimePicker();
+            this.depTimePic = new System.Windows.Forms.DateTimePicker();
+            this.arrTimePic = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.numLeftUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,16 +78,9 @@
             this.numberText.Size = new System.Drawing.Size(182, 31);
             this.numberText.TabIndex = 2;
             // 
-            // depDateText
-            // 
-            this.depDateText.Location = new System.Drawing.Point(41, 364);
-            this.depDateText.Name = "depDateText";
-            this.depDateText.PlaceholderText = "MM/DD/YY";
-            this.depDateText.Size = new System.Drawing.Size(182, 31);
-            this.depDateText.TabIndex = 4;
-            // 
             // typeBox
             // 
+            this.typeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.typeBox.FormattingEnabled = true;
             this.typeBox.Items.AddRange(new object[] {
             "S",
@@ -100,6 +93,7 @@
             // 
             // destBox
             // 
+            this.destBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.destBox.FormattingEnabled = true;
             this.destBox.Items.AddRange(new object[] {
             "Minsk",
@@ -113,20 +107,12 @@
             this.destBox.Size = new System.Drawing.Size(182, 33);
             this.destBox.TabIndex = 6;
             // 
-            // arrTimeText
-            // 
-            this.arrTimeText.Location = new System.Drawing.Point(254, 220);
-            this.arrTimeText.Name = "arrTimeText";
-            this.arrTimeText.PlaceholderText = "HH:MM";
-            this.arrTimeText.Size = new System.Drawing.Size(180, 31);
-            this.arrTimeText.TabIndex = 7;
-            // 
             // costText
             // 
-            this.costText.Location = new System.Drawing.Point(254, 293);
+            this.costText.Location = new System.Drawing.Point(257, 295);
             this.costText.Name = "costText";
             this.costText.PlaceholderText = "X.X";
-            this.costText.Size = new System.Drawing.Size(180, 31);
+            this.costText.Size = new System.Drawing.Size(177, 31);
             this.costText.TabIndex = 8;
             // 
             // numLeftUpDown
@@ -135,14 +121,6 @@
             this.numLeftUpDown.Name = "numLeftUpDown";
             this.numLeftUpDown.Size = new System.Drawing.Size(180, 31);
             this.numLeftUpDown.TabIndex = 9;
-            // 
-            // depTimeTExt
-            // 
-            this.depTimeTExt.Location = new System.Drawing.Point(251, 146);
-            this.depTimeTExt.Name = "depTimeTExt";
-            this.depTimeTExt.PlaceholderText = "HH:MM";
-            this.depTimeTExt.Size = new System.Drawing.Size(183, 31);
-            this.depTimeTExt.TabIndex = 10;
             // 
             // label2
             // 
@@ -226,11 +204,40 @@
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
+            // depDatePic
+            // 
+            this.depDatePic.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.depDatePic.Location = new System.Drawing.Point(41, 364);
+            this.depDatePic.Name = "depDatePic";
+            this.depDatePic.Size = new System.Drawing.Size(182, 31);
+            this.depDatePic.TabIndex = 22;
+            // 
+            // depTimePic
+            // 
+            this.depTimePic.CustomFormat = "hh:mm tt";
+            this.depTimePic.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.depTimePic.Location = new System.Drawing.Point(257, 146);
+            this.depTimePic.Name = "depTimePic";
+            this.depTimePic.Size = new System.Drawing.Size(177, 31);
+            this.depTimePic.TabIndex = 23;
+            // 
+            // arrTimePic
+            // 
+            this.arrTimePic.CustomFormat = "hh:mm tt";
+            this.arrTimePic.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.arrTimePic.Location = new System.Drawing.Point(257, 220);
+            this.arrTimePic.Name = "arrTimePic";
+            this.arrTimePic.Size = new System.Drawing.Size(177, 31);
+            this.arrTimePic.TabIndex = 24;
+            // 
             // AddNewBusForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 450);
+            this.ClientSize = new System.Drawing.Size(499, 450);
+            this.Controls.Add(this.arrTimePic);
+            this.Controls.Add(this.depTimePic);
+            this.Controls.Add(this.depDatePic);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -240,13 +247,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.depTimeTExt);
             this.Controls.Add(this.numLeftUpDown);
             this.Controls.Add(this.costText);
-            this.Controls.Add(this.arrTimeText);
             this.Controls.Add(this.destBox);
             this.Controls.Add(this.typeBox);
-            this.Controls.Add(this.depDateText);
             this.Controls.Add(this.numberText);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.addButton);
@@ -263,13 +267,10 @@
         private Button addButton;
         private Label label1;
         private TextBox numberText;
-        private TextBox depDateText;
         private ComboBox typeBox;
         private ComboBox destBox;
-        private TextBox arrTimeText;
         private TextBox costText;
         private NumericUpDown numLeftUpDown;
-        private TextBox depTimeTExt;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -279,5 +280,8 @@
         private Label label8;
         private Label label9;
         private Button backButton;
+        private DateTimePicker depDatePic;
+        private DateTimePicker depTimePic;
+        private DateTimePicker arrTimePic;
     }
 }

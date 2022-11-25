@@ -22,9 +22,23 @@ namespace CourseProject
 
         private void byNumberButton_Click(object sender, EventArgs e)
         {
-            string sqlExpression = $"SELECT * FROM bus_info WHERE number = '{numberText.Text}'";
-            SearchGrid(sqlExpression);
-
+            int temp;
+            if(numberText.Text.Length == 4)
+            {
+                if (!int.TryParse(numberText.Text, out temp))
+                {
+                    string sqlExpression = $"SELECT * FROM bus_info WHERE number = '{numberText.Text}'";
+                    SearchGrid(sqlExpression);
+                }
+                else
+                {
+                    AddNewBusForm.ErrMsg("Number it's incorrect");
+                }
+            }
+            else
+            {
+                AddNewBusForm.ErrMsg("Number must equal 4 char");
+            }
         }
 
         public static void SearchGrid(string sqlExpression)
@@ -47,26 +61,41 @@ namespace CourseProject
 
         private void byDepDataButton_Click(object sender, EventArgs e)
         {
-            string sqlExpression = $"SELECT * FROM bus_info WHERE dep_date = '{depDataText.Text}'";
+            string sqlExpression = $"SELECT * FROM bus_info WHERE dep_date = '{depDatePic.Value.ToShortDateString()}'";
             SearchGrid(sqlExpression);
         }
 
         private void byDepTimeButton_Click(object sender, EventArgs e)
         {
-            string sqlExpression = $"SELECT * FROM bus_info WHERE dep_time = '{depTimeText.Text}'";
+            string sqlExpression = $"SELECT * FROM bus_info WHERE dep_time = '{depTimePic.Value.ToShortTimeString}'";
             SearchGrid(sqlExpression);
         }
 
         private void byArrTimeButton_Click(object sender, EventArgs e)
         {
-            string sqlExpression = $"SELECT * FROM bus_info WHERE arr_time = '{arrTimeText.Text}'";
+            string sqlExpression = $"SELECT * FROM bus_info WHERE arr_time = '{arrTimePic.Value.ToShortTimeString}'";
             SearchGrid(sqlExpression);
         }
 
         private void byCostButton_Click(object sender, EventArgs e)
         {
-            string sqlExpression = $"SELECT * FROM bus_info WHERE cost = '{costText.Text}'";
-            SearchGrid(sqlExpression);
+            if (double.TryParse(costText.Text, out var cost))
+            {
+                if (cost > 0)
+                {
+                    string sqlExpression = $"SELECT * FROM bus_info WHERE cost = '{costText.Text}'";
+                    SearchGrid(sqlExpression);
+                }
+                else
+                {
+                    AddNewBusForm.ErrMsg("Cost must be more than 0");
+                }
+                
+            }
+            else
+            {
+                AddNewBusForm.ErrMsg("Cost it's incorrect");
+            }
         }
 
         private void byNumLeftButton_Click(object sender, EventArgs e)
@@ -88,6 +117,11 @@ namespace CourseProject
         }
 
         private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchDataForm_Load(object sender, EventArgs e)
         {
 
         }
